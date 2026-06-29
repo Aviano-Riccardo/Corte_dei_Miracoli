@@ -23,7 +23,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position:sticky;
+    position: sticky;
     box-sizing: border-box;
 }
 
@@ -32,6 +32,7 @@ nav {
     font-weight: 700;
     color: red(255, 0, 174);
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .nav-links {
@@ -82,6 +83,8 @@ nav {
     box-shadow: 0 0 25px red;
 }
 
+/* Index */
+
 .desc {
     display: flex;
     justify-content: space-between;
@@ -108,7 +111,8 @@ nav {
     }
 
     .desc-img {
-        position: relative !important; /* FORZA la rimozione di absolute */
+        position: relative !important;
+        /* FORZA la rimozione di absolute */
         width: 100%;
         height: auto;
     }
@@ -154,7 +158,9 @@ nav {
     color: red;
 }
 
-div.box-chisiamo > p{
+/* Chi siamo */
+
+div.box-chisiamo>p {
     margin-top: 50px;
 }
 
@@ -169,39 +175,458 @@ div.box-chisiamo > p{
     line-height: 35px;
 }
 
-.title-sticky{
-    position:sticky;
+.title-sticky {
+    position: sticky;
     margin: 2rem 2%;
 }
 
-@media (max-width: 1100px) {
-    .page-hero,
-    .feature-grid,
-    .program-grid,
-    .events-grid,
-    .live-grid,
-    .event-strip {
-        grid-template-columns: 1fr;
+/* Tabella attori */
+
+.attori-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.titolo-attori {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tabella-attori {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabella-attori th {
+    background-color: #0a0a0a;
+    color: var(--title-red, red);
+    font-family: 'Elms Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-bottom: 2px solid red;
+    text-align: left;
+}
+
+.tabella-attori td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+}
+
+.tabella-attori tr:hover {
+    background-color: rgba(255, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.attore-foto {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    display: block;
+}
+
+.attore-nome {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.attore-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Responsive per smartphone */
+@media (max-width: 768px) {
+
+    .tabella-attori,
+    .tabella-attori thead,
+    .tabella-attori tbody,
+    .tabella-attori th,
+    .tabella-attori td,
+    .tabella-attori tr {
+        display: block;
+    }
+
+    .tabella-attori thead {
+        display: none;
+        /* Nasconde la testata su mobile */
+    }
+
+    .tabella-attori tr {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 0, 0, 0.3);
+        padding: 15px;
+        text-align: center;
+        background: #050505;
+    }
+
+    .tabella-attori td {
+        border-bottom: none;
+        padding: 10px 0;
+    }
+
+    .attore-foto {
+        margin: 0 auto;
     }
 }
 
-@media (max-width: 760px) {
-    .program-card {
-        grid-template-columns: 1fr;
-    }
+/* Tabella Staff */
 
-    .page-hero-copy h1 {
-        font-size: 2.2rem;
-    }
+.staff-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
 }
 
-@media (max-width: 1100px) {
-    .page-hero { grid-template-columns: 1fr; gap: 1.5rem; }
-    .feature-grid, .events-grid { grid-template-columns: repeat(2, 1fr); }
+.titolo-staff {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
+
+.tabella-staff {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabella-staff th {
+    background-color: #0a0a0a;
+    color: var(--title-red, red);
+    font-family: 'Elms Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-bottom: 2px solid red;
+    text-align: left;
+}
+
+.tabella-staff td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+}
+
+.tabella-staff tr:hover {
+    background-color: rgba(255, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.staff-foto {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    display: block;
+}
+
+.staff-nome {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.staff-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Contatti */
+.box-contatti {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.box-contatti h1 {
+    margin-bottom: 1.5rem;
+}
+
+.contatti {
+    list-style: none;
+}
+
+.contatti  li  a {
+    text-decoration: none;
+    color: white;
+}
+
+.contatti li a:hover {
+    color: red;
+}
+
+/* Spettacoli */
+
+.spettacoli-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.titolo-sezione-spettacoli {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sezione-passati {
+    margin-top: 5rem; /* Distanza marcata dalla stagione in corso */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+}
+
+/* Griglia per le Card degli Spettacoli */
+.spettacoli-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+/* Griglia ridotta di opacità per l'effetto memoria del passato */
+.spettacoli-grid.passato {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.spettacoli-grid.passato .spettacolo-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.spettacoli-grid.passato .spettacolo-img img {
+    filter: grayscale(40%); /* Foto storiche leggermente desaturate */
+}
+
+/* Struttura della singola Card */
+.spettacolo-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effetto Hover stile Corte dei Miracoli */
+.spettacolo-card.futuro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 0, 0, 0.4);
+}
+
+/* Immagine di Copertina dello Spettacolo */
+.spettacolo-img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #050505;
+}
+
+.spettacolo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Badge di stato sulle foto */
+.badge-data {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: red;
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+/* Dettagli della scheda informativa */
+.spettacolo-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.spettacolo-titolo {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.spettacolo-data, .spettacolo-regia {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 0.4rem;
+}
+
+.spettacolo-data strong, .spettacolo-regia strong {
+    color: red;
+}
+
+.spettacolo-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #aaa;
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Bottone Biglietti specifico dentro la card */
+.btn-ticket {
+    margin-top: auto; /* Spinge il bottone sempre in fondo alla card */
+    align-self: flex-start;
+    padding: 0.6rem 2rem;
+}
+
+/* Merchandising */
+
+.merch-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.titolo-merch {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.sottotitolo-merch {
+    font-size: 1.1rem;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+/* Griglia dei prodotti (Simile a quella degli spettacoli) */
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+/* Card Prodotto */
+.merch-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Effetto Hover */
+.merch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 0, 0, 0.4);
+}
+
+/* Box Immagine */
+.merch-img {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #050505;
+}
+
+.merch-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Badge del Prezzo (Sullo stile del badge della data degli spettacoli) */
+.badge-prezzo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: red;
+    color: white;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+/* Dettagli della scheda informativa */
+.merch-info {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.merch-titolo {
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.merch-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #aaa;
+    margin-bottom: 1.8rem;
+    text-align: justify;
+}
+
+/* Bottone Acquista forzato in fondo alla card */
+.btn-acquista {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 0.6rem 2.5rem;
+}
+
+/* Media query*/
 
 @media (max-width: 768px) {
-    
+
     /* MENU NAVIGAZIONE VERTICALE */
     nav {
         flex-direction: column !important;
@@ -230,14 +655,15 @@ div.box-chisiamo > p{
         margin-bottom: 2rem !important;
     }
 
-    .desc-box h1 { 
-        font-size: 2.3rem !important; 
+    .desc-box h1 {
+        font-size: 2.3rem !important;
     }
 
     .desc-img {
         position: relative !important;
         width: 100% !important;
-        height: auto !important; /* Foto benvenuto proporzionata */
+        height: auto !important;
+        /* Foto benvenuto proporzionata */
         right: auto !important;
         top: auto !important;
         z-index: 1 !important;
@@ -248,38 +674,141 @@ div.box-chisiamo > p{
         border-radius: 8px;
     }
 
-    /* I TRE DIV IN COLONNA SINGOLA INTERA (Zero tagli) */
-    .primo-piano {
-        display: flex !important;
-        flex-direction: column !important;       /* Allineamento verticale */
-        gap: 2.5rem !important;                  /* Spazio tra i blocchi */
-        padding: 2rem 5% !important;
-    }
-
-    .news, .podcast, .programmi {
-        width: 100% !important;                  /* Occupa tutto lo schermo dello smartphone */
-        display: block !important;
-        box-sizing: border-box !important;
-    }
-
-    /* FIX FOTO: Mantengono la larghezza intera e scalano l'altezza proporzionalmente */
-    .news img, .podcast img, .programmi img {
-        width: 100% !important;
-        height: auto !important;                 /* Nessuna altezza forzata = nessun taglio dell'immagine */
-        display: block !important;
-        object-fit: contain !important;          /* Conserva l'aspetto originale completo */
-    }
-
-    /* Altre griglie del sito */
-    .notiziePodcast, .feature-grid, .program-grid, .events-grid, .event-strip {
-        grid-template-columns: 1fr !important;
-    }
-    .notizia { flex-direction: column !important; }
-    .notizia img { width: 100% !important; height: auto !important; }
 }
 
-@media (max-width: 580px) {
-    .program-card { grid-template-columns: 1fr !important; }
-    .program-card img { height: 150px !important; min-height: auto !important; }
-    .page-hero-copy h1 { font-size: 2rem !important; }
+@media (max-width: 768px) {
+
+    .tabella-attori,
+    .tabella-attori thead,
+    .tabella-attori tbody,
+    .tabella-attori th,
+    .tabella-attori td,
+    .tabella-attori tr {
+        display: block;
+    }
+
+    .tabella-attori thead {
+        display: none;
+        /* Nasconde la testata su mobile */
+    }
+
+    .tabella-attori tr {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 0, 0, 0.3);
+        padding: 15px;
+        text-align: center;
+        background: #050505;
+    }
+
+    .tabella-attori td {
+        border-bottom: none;
+        padding: 10px 0;
+    }
+
+    .attore-foto {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .tabella-staff,
+    .tabella-staff thead,
+    .tabella-staff tbody,
+    .tabella-staff th,
+    .tabella-staff td,
+    .tabella-staff tr {
+        display: block;
+    }
+
+    .tabella-staff thead {
+        display: none;
+        /* Nasconde la testata su mobile */
+    }
+
+    .tabella-staff tr {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 0, 0, 0.3);
+        padding: 15px;
+        text-align: center;
+        background: #050505;
+    }
+
+    .tabella-staff td {
+        border-bottom: none;
+        padding: 10px 0;
+    }
+
+    .staff-foto {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .spettacoli-grid, .spettacoli-grid.passato {
+        grid-template-columns: 1fr !important; /* Colonna singola sui telefoni e tablet stretti */
+        gap: 2rem;
+    }
+    
+    .titolo-sezione-spettacoli {
+        font-size: 2.2rem !important;
+        text-align: center;
+    }
+    
+    .spettacolo-img {
+        height: 220px; /* Riduzione proporzionata dell'immagine sui dispositivi piccoli */
+    }
+}
+
+@media (max-width: 900px) {
+    .merch-grid {
+        grid-template-columns: 1fr !important; /* Colonna singola su mobile */
+        gap: 2rem;
+    }
+    
+    .titolo-merch {
+        font-size: 2.2rem !important;
+    }
+    
+    .merch-img {
+        height: 250px; /* Riduce l'altezza dell'immagine sui piccoli schermi */
+    }
+}
+
+@media (max-width: 768px) {
+    
+    /* Evita che il testo giustificato crei spazi giganti su schermi stretti */
+    .box-chisiamo, .box-contatti {
+        padding: 1.5rem 1rem;
+        text-align: left; /* Migliore leggibilità su smartphone rispetto a justify */
+        font-size: 1.15rem; /* Riduzione proporzionale del font-size "x-large" */
+        line-height: 1.5;
+    }
+
+    div.box-chisiamo > p {
+        margin-top: 20px; /* Ridotto lo spazio superiore per non distanziare troppo dal titolo */
+    }
+
+    /* Ottimizzazione del bottone spettacoli nella navbar su mobile */
+    .button {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .btn-spettacoli {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .desc-box h1 {
+        font-size: 1.8rem !important; /* Riduce il titolo principale per evitare che si spezzi male */
+    }
+    
+    .logo {
+        font-size: 1.4rem; /* Riduce leggermente il logo per farlo stare su una riga */
+    }
 }

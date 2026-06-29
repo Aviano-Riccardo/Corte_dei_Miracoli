@@ -20,44 +20,88 @@
                 <li><a href="dietroLeQuinte.html">Dietro le Quinte</a></li>
                 <li><a href="spettacoli.html">Spettacoli</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
-                <li><a href="merch.html">Merchandaising</a></li>
+                <li><a href="merch.html">Merchandising</a></li>
             </ul>
             <div class="bottom">
                 <button class="button"><a href="spettacoli.html" class="btn-spettacoli">Spettacoli</a></button>
             </div>
         </nav>
 
-        <div class="desc">
-            <div class="desc-box">
-                <h1>LA MUSICA <br> <span class="title-red">CHE TI ACCOMPAGNA</span></h1>
-                <p>Le migliori hit, le voci che ami e la compagnia di sempre. Sintonizzati e ascoltaci live!</p>
-            </div>
-            <div class="desc-img">
-                <img src="./img/sfondoIndex.jpg" alt="immagine studio">
-            </div>
-        </div>
-        <div class="primo-piano">
-            <div class="news">
-                <img src="./img/newsPrimoPiano.png" alt="immagine news">
-                <div class="news-content">
-                    <h2 class="title-red">NEWS</h2>
-                    <p>descrizione news</p>
-                </div>
-            </div>
-            <div class="podcast">
-                    <img src="./img/podcastPrimoPiano.png" alt="immagine news">
-                    <div class="podcast-content">
-                        <h2 class="title-red">PODCAST</h2>
-                        <p>descrizione podcast</p>
+        <!-- Contenitore Principale Spettacoli -->
+        <div class="spettacoli-container">
+            
+            <!-- SEZIONE SPETTACOLI DA FARE (In Programmazione) -->
+            <h1 class="titolo-sezione-spettacoli">In <span class="title-red">Bacheca</span></h1>
+            
+            <div class="spettacoli-grid">
+                <!-- Spettacolo Futuro 1 -->
+                <div class="spettacolo-card futuro">
+                    <div class="spettacolo-img">
+                        <img src="./foto/spettacolo1.jpeg" alt="Titolo Spettacolo 1">
+                        <div class="badge-data">Prossimamente</div>
                     </div>
-            </div>
-            <div class="programmi">
-                <img src="./img/programmiPrimoPiano.png" alt="immagine programmi">
-                <div class="program-content">
-                    <h2 class="title-red">PROGRAMMI IN PRIMO PIANO</h2>
-                    <p>descrizione programma</p>
+                    <div class="spettacolo-info">
+                        <h2 class="spettacolo-titolo">Titolo</h2>
+                        <p class="spettacolo-data"><strong>Data:</strong> GG-MM-AAAA - Ore h:mm</p>
+                        <p class="spettacolo-regia"><strong>Regia:</strong> Alessandro Galli</p>
+                        <p class="spettacolo-desc">Piccola descrizione dello spettacolo</p>
+                        <button class="button btn-ticket">Prenota Biglietti</button>
+                    </div>
+                </div>
+
+                <!-- Spettacolo Futuro 2 -->
+                <div class="spettacolo-card futuro">
+                    <div class="spettacolo-img">
+                        <img src="./foto/spettacolo2.jpeg" alt="Titolo Spettacolo 2">
+                        <div class="badge-data">Prossimamente</div>
+                    </div>
+
+                    <div class="spettacolo-info">
+                        <h2 class="spettacolo-titolo">Titolo</h2>
+                        <p class="spettacolo-data"><strong>Data:</strong> GG-MM-AAAA - Ore h:mm</p>
+                        <p class="spettacolo-regia"><strong>Regia:</strong> Alessandro Galli</p>
+                        <p class="spettacolo-desc">Piccola descrizione spettacolo</p>
+                        <button class="button btn-ticket">Prenota Biglietti</button>
+                    </div>
                 </div>
             </div>
+
+
+            <!-- SEZIONE SPETTACOLI PASSATI (Archivio) -->
+            <h1 class="titolo-sezione-spettacoli sezione-passati">I Nostri <span class="title-red">Successi Passati</span></h1>
+            
+            <div class="spettacoli-grid passato">
+                <!-- Spettacolo Passato 1 -->
+                <div class="spettacolo-card">
+                    <div class="spettacolo-img">
+                        <img src="./foto/passato1.jpeg" alt="Spettacolo Passato 1">
+                    </div>
+                    <div class="spettacolo-info">
+                        <h2 class="spettacolo-titolo">Cyrano de Bergerac</h2>
+                        <p class="spettacolo-data"><strong>Repliche:</strong> Autunno 2025</p>
+                        <p class="spettacolo-desc">La storia di questo povero cadetto di guascogna innamorato della cugina Rossana. Costretto a non mostrare i sui sentimenti nei sui confronti
+                            aiuta un giovane cadetto parigino Cristiano a conquistare la sua amata cugina.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Spettacolo Passato 2 -->
+                <div class="spettacolo-card">
+                    <div class="spettacolo-img">
+                        <img src="./foto/passato2.jpeg" alt="Spettacolo Passato 2">
+                    </div>
+                    <div class="spettacolo-info">
+                        <h2 class="spettacolo-titolo">Delenda Est</h2>
+                        <p class="spettacolo-data"><strong>Repliche:</strong> DA DEFINIRE</p>
+                        <p class="spettacolo-desc">La regina di Cartagine e un erore troiano si incontrano dando vita a un caloroso amore che si trasforma in tragedia greco romana strappalacrime.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <footer>
+            <p>&copy; 2026 Corte dei Miracoli - Attori (3 INFO)</p>
+        </footer>
     </body>
 </html>
